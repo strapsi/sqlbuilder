@@ -12,10 +12,8 @@ repositories {
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
     testImplementation("io.kotlintest:kotlintest-runner-junit5:3.3.0")
-}
-
-apply {
-    from("$rootDir/integration-test.gradle")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.3.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.3.1")
 }
 
 tasks {
